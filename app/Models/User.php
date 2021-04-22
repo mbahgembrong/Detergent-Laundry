@@ -16,6 +16,9 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+     protected $table ='users';
+
     protected $fillable = [
         'id',
         'name',
@@ -25,7 +28,8 @@ class User extends Authenticatable
         'email',
         'password',
     ];
-
+    protected $primaryKey = 'id';
+    public $incrementing = false;
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -46,8 +50,12 @@ class User extends Authenticatable
     ];
     
 
+    public function level()
+    {
+        return $this->belongsTo('App\Models\Level','level_id','id');
+    }
     public function user()
     {
-        return $this->hasMany('App\Model\Transaksi');
+        return $this->hasMany('App\Models\Transaksi');
     }
 }
