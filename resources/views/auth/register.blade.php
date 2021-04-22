@@ -50,30 +50,25 @@
                                         </span>
                                         @enderror
                                     </div>
-                                    <!-- <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Last Name">
-                                    </div> -->
+
                                 </div>
+
                                 <div class="form-group row">
-                                    <div class="col-sm-12 mb-3 mb-sm-0">
-                                        <input id="alamat" type="text"
-                                            class="form-control form-control-user @error('alamat') is-invalid @enderror"
-                                            name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
-                                            placeholder="Full Name">
-                                        @error('alamat')
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input input id="email" type="email"
+                                            class="form-control form-control-user @error('email') is-invalid @enderror"
+                                            name="email" value="{{ old('email') }}" placeholder="Email Address">
+                                        @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
                                     </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <div class="col-sm-6">
                                         <input id="telp" type="text"
                                             class="form-control form-control-user @error('telp') is-invalid @enderror"
-                                            name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
-                                            placeholder="Full Name">
+                                            name="telp" value="{{ old('telp') }}" required autofocus
+                                            placeholder="Number Telphone">
                                         @error('telp')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -81,16 +76,18 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <input input id="email" type="email"
-                                        class="form-control form-control-user @error('email') is-invalid @enderror"
-                                        name="email" value="{{ old('email') }}" required autocomplete="email"
-                                        placeholder="Email Address">
-                                    @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
+                                <div class="form-group row">
+                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                        <input id="alamat" type="text"
+                                            class="form-control form-control-user @error('alamat') is-invalid @enderror"
+                                            name="alamat" value="{{ old('alamat') }}" required autofocus
+                                            placeholder="Alamat">
+                                        @error('alamat')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -112,7 +109,6 @@
                                 <button type="submit" class="btn btn-primary  btn-user btn-block">
                                     {{ __('Register Acount') }}
                                 </button>
-
                                 <!-- <hr>
                                 <a href="index.html" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Register with Google
