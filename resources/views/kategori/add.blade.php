@@ -1,11 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.app',['breadcumb'=>['icon'=>"pe-7s-magic-wand",'title'=>"Tambah kategori","desc"=>"tambahkan data
+kategori"],'sidebar'=>"kategori-tambah"])
 @section('content')
 <div class="row">
     <div class="col-12">
         <div class="card m-b-20">
             <div class="card-body">
-
-                <h4 class="mt-0 mb-4 header-title">Tambah kategori</h4>
                 <form action="{{ route('kategori.store') }}" method="post" enctype='multipart/form-data'>
                     @csrf
                     <div class="form-group row">
@@ -34,8 +33,7 @@
                     <div class="form-group row">
                         <label for="layanan" class="col-sm-2 col-form-label">Jenis Layanan</label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" placeholder="Cuci" name='service'
-                                id="layanan">
+                            <input class="form-control" type="text" placeholder="Cuci" name='service' id="layanan">
                         </div>
                     </div>
                     <button type="submit" class='btn btn-primary float-right'>Submit</button>

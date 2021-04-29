@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app',['breadcumb'=>['icon'=>"pe-7s-magic-wand",'title'=>"Edit kategori",'desc'=>"Edit Data kategori",],'sidebar'=>"kategori-lihat"])
 @section('content')
     <div class="row">
         <div class="col-12">

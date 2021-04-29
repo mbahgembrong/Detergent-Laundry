@@ -12,6 +12,7 @@ class Transaksi extends Model
     protected $table = 'transaksis';
 
     protected $primaryKey = 'id';
+    public $incrementing = false;
 
     protected $fillable = ['id','karyawan_id','pelanggan_id','kategori_id','berat_barang','satuan_barang','total_harga'];
 
@@ -21,11 +22,11 @@ class Transaksi extends Model
     }
     public function karyawan()
     {
-        return $this->belongsto('App\Models\User','karyawan_id');
+        return $this->belongsto('App\Models\User','karyawan_id','id');
     }
     public function pelanggan()
     {
-        return $this->belongsto('App\Models\User','pelanggan_id');
+        return $this->belongsto('App\Models\User','pelanggan_id','id');
     }
     public function kategori()
     {

@@ -9,8 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
-
+    <title>Detergent Laundry - Login</title>
+    <script language='JavaScript'>
+        txt = "Detergent Laundry - Login | ";
+        var speed = 300;
+        var refresh = null;
+        function action() {
+            document.title = txt;
+            txt = txt.substring(1, txt.length) + txt.charAt(0);
+            refresh = setTimeout("action()", speed);
+        }
+        action();
+    </script>
     <!-- Custom fonts for this template-->
     <link href="{{asset('admin/vendor/fontawesome-free/css/all.min.css')}} " rel="stylesheet" type="text/css">
     <link
